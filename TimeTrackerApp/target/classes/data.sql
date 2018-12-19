@@ -1,0 +1,2 @@
+#insert into employee (created_date, email_id, name, password, phone_no, role, status, team, employee_no) values ('14/11/2018', 'deepak.sekarbabu@tcs.com', 'Deepak', '123', '9789801844', 'ITA', 'ACTIVE', 'FIT', '1359402');
+#insert into time_effort (employee_task_id, created_date, effort, effort_date, employee_no, epic_id, jira_id, outof_office, project_id, task_description) values ('1', '20/12/2018','9',  '20/12/2018', '1359402', '12345', '2154', 1, '2', 'Desc');
