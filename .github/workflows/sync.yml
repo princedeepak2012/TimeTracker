@@ -15,17 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    
-    - name: Secrets
+    steps:  
+  
+    - name: Test     
       uses: google/secrets-sync-action@v1.4.1
       with:
-        secrets: |
-          env.DOCKER_PASSWORD
-          env.TOKEN
-        repositories_list_regex: false
-        repositories: |
+        SECRETS: |
+          ^DOCKER_PASSWORD$
+          ^TOKEN.*
+          ^GITHUB_.*
+        REPOSITORIES: |
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
-        dry_run: false
-        github_token: ${{ secrets.GITHUB_TOKEN }}    
+        DRY_RUN: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_SECRETS }}
+        CONCURRENCY: 10
+      env:
+        FOO: ${{github.run_id}}
+        FOOBAR: BAZ
