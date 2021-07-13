@@ -25,7 +25,7 @@ jobs:
         repositories: |          
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
-        dry_run: false
+        dry_run: true
         github_token: ${{ secrets.GITHUB_TOKEN }}   
       env:
        FOO: ${{secrets.DOCKER_PASSWORD}}
