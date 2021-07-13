@@ -27,7 +27,7 @@ jobs:
         REPOSITORIES: |
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
-        DRY_RUN: true
+        DRY_RUN: false
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CONCURRENCY: 10
       env:
