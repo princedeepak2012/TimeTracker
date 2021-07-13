@@ -21,11 +21,10 @@ jobs:
       uses: google/secrets-sync-action@v1.4.1
       with:
         secrets: |
-          DOCKER_PASSWORD
-          TOKEN
+          env.DOCKER_PASSWORD
+          env.TOKEN
         repositories_list_regex: false
         repositories: |
-          "https://github.com/princedeepak2012/Time-Tracker-Spring-Boot.git"
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
         dry_run: false
