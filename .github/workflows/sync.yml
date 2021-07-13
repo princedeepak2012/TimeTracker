@@ -11,10 +11,20 @@ jobs:
   greet:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    permissions:
+      actions: read|write|none
+      checks: read|write|none
+      contents: read|write|none
+      deployments: read|write|none
+      issues: read|write|none
+      packages: read|write|none
+      pull-requests: read|write|none
+      repository-projects: read|write|none
+      security-events: read|write|none
+      statuses: read|write|none
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    
+    steps:    
     - name: Secrets
       uses: google/secrets-sync-action@v1.4.1
       with:
@@ -22,11 +32,11 @@ jobs:
           ^DOCKER_PASSWORD
           ^TOKEN
         repositories_list_regex: false
-        repositories: |          
+        repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
         dry_run: true
-        github_token: ${{ secrets.GITHUB_TOKEN }}   
+        github_token: ${{ secrets.GITHUB_TOKEN }}
       env:
        FOO: ${{secrets.DOCKER_PASSWORD}}
-       FOOBAR: ${{secrets.TOKEN}}  
+       FOOBAR: ${{secrets.TOKEN}}
