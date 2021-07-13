@@ -28,7 +28,7 @@ jobs:
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
         DRY_RUN: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_SECRETS }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CONCURRENCY: 10
       env:
         FOO: ${{github.run_id}}
