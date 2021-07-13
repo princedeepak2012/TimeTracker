@@ -17,14 +17,16 @@ jobs:
     
     - name: Secrets
       uses: google/secrets-sync-action@v1.4.1
-      with:      
+      with:
         secrets: |
-          ^DOCKER_PASSWORD$         
+          ^DOCKER_PASSWORD
+          ^TOKEN
         repositories_list_regex: false
-        repositories: |
+        repositories: |          
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
         dry_run: false
-        github_token: ${{ secrets.GITHUB_TOKEN }}  
+        github_token: ${{ secrets.GITHUB_TOKEN }}   
       env:
-        DOCKER_PASSWORD : ${{DOCKER_PASSWORD}}
+       FOO: ${{secrets.DOCKER_PASSWORD}}
+       FOOBAR: ${{secrets.TOKEN}}  
