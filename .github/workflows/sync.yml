@@ -20,9 +20,11 @@ jobs:
     - name: Secrets
       uses: google/secrets-sync-action@v1.4.1
       with:
-        SECRETS: "DOCKER_PASSWORD"
-        REPOSITORIES: |
+        secrets: |
+          ^DOCKER_PASSWORD$
+        repositories_list_regex: false
+        repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
         DRY_RUN: false
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CONCURRENCY: 1
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+       
