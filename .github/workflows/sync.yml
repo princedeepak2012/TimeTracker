@@ -21,10 +21,11 @@ jobs:
       uses: google/secrets-sync-action@v1.4.1
       with:
         secrets: |
-          ^DOCKER_PASSWORD$
+          ^DOCKER_PASSWORD
+          ^TOKEN
         repositories_list_regex: false
         repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
-        DRY_RUN: false
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-       
+          "https://github.com/princedeepak2012/TestSyncSecret.git"
+        dry_run: false
+        github_token: ${{ secrets.GITHUB_TOKEN }}    
