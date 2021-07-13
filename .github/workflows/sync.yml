@@ -31,5 +31,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CONCURRENCY: 10
       env:
-        FOO: ${{github.run_id}}
-        FOOBAR: BAZ
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        TOKEN: ${{secrets.DOCKER_PASSWORD}}
