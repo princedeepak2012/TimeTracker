@@ -25,6 +25,7 @@ jobs:
           ^TOKEN
         repositories_list_regex: false
         repositories: |
+          "https://github.com/princedeepak2012/Time-Tracker-Spring-Boot.git"
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
         dry_run: false
