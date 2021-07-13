@@ -25,6 +25,6 @@ jobs:
         repositories_list_regex: false
         repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
-        DRY_RUN: false
+        DRY_RUN: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
        
