@@ -37,7 +37,7 @@ jobs:
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
           "https://github.com/princedeepak2012/Time-Tracker-Spring-Boot.git"
-        dry_run: true
+        dry_run: false
         github_token: ${{ secrets.GITHUB_TOKEN }}
       env:
        FOO: ${{secrets.DOCKER_PASSWORD}}
