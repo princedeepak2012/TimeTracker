@@ -36,6 +36,7 @@ jobs:
         repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
           "https://github.com/princedeepak2012/TestSyncSecret.git"
+          "https://github.com/princedeepak2012/Time-Tracker-Spring-Boot.git"
         dry_run: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
       env:
