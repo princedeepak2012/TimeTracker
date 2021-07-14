@@ -29,8 +29,9 @@ jobs:
       uses: google/secrets-sync-action@v1.4.1
       with:
         secrets: |
+          ^DOCKER
           ^DOCKER_PASSWORD
-          ^TOKEN
+          ^TOKEN          
         repositories_list_regex: false
         repositories: |
           "https://github.com/princedeepak2012/Spring-Native.git"
